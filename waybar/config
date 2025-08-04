@@ -1,0 +1,38 @@
+{
+	"include": [
+	  "$HOME/.config/waybar/Modules",
+	  "$HOME/.config/waybar/ModulesWorkspaces",
+	  "$HOME/.config/waybar/ModulesCustom",
+	  "$HOME/.config/waybar/ModulesGroups",
+	  "$HOME/.config/waybar/UserModules"
+	  ],
+	"layer": "top",
+	"exclusive": true,
+	"passthrough": false,
+	"position": "top",
+	"height": 30,
+	"spacing": 5,
+	"fixed-center": true,
+	"ipc": true,
+	
+	"modules-left": [ "sway/workspaces", "sway/mode" ],
+	
+	"modules-center": [ "sway/language" ],
+	
+	"modules-right": [
+		"tray",
+		"custom/separator#line",
+		"network",
+		"custom/separator#line",
+		"bluetooth",
+		"custom/separator#line",
+		"temperature",
+		"cpu",
+		"memory",
+		"custom/separator#line",
+		"pulseaudio",
+		"pulseaudio#microphone",
+		"custom/separator#line",
+		"clock#3"
+		]
+}

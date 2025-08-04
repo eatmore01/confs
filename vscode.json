@@ -1,0 +1,67 @@
+{
+    //main settings
+    "editor.minimap.enabled": false,
+    "editor.quickSuggestionsDelay": 0,
+    "editor.formatOnSave": true,
+    "editor.guides.bracketPairs": "active",
+    "explorer.confirmPasteNative": false,
+    "editor.fontLigatures": true,
+    "extensions.ignoreRecommendations": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false,
+    "editor.defaultFormatter": "hashicorp.terraform",
+    //zoom params
+    "editor.fontSize": 11.5,
+    "window.zoomLevel": 1,
+    "git.ignoreMissingGitWarning": true,
+    "git.openRepositoryInParentFolders": "always",
+    //gitlab workflows settings
+    "gitlab.duoCodeSuggestions.additionalLanguages": [
+        "yaml",
+        "jsonc",
+        "go",
+    ],
+    //yml formatters settings, etc.
+    "redhat.telemetry.enabled": false,
+    "[yaml]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.codeLens": true,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "kennylong.kubernetes-yaml-formatter",
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.formatOnSave": true,
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true
+        }
+    },
+    "[go]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+        "editor.defaultFormatter": "golang.go",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.autopep8",
+    },
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.fontSize": 14,
+    "workbench.colorTheme": "Bearded Theme Monokai Metallian",
+}
