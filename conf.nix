@@ -59,6 +59,7 @@
     kubernetes-helm
     terraform
     terragrunt
+    k9s
   ];
 
   virtualisation.docker.enable = true;
