@@ -58,11 +58,14 @@
     kubectl
     kubernetes-helm
     terraform
-    terragrunt
     k9s
+    terragrunt
+    terraform-docs
+    helm-docs
   ];
 
   virtualisation.docker.enable = true;
+
   # start needed amneziavpn service
   programs.amnezia-vpn.enable = true;
 
@@ -106,9 +109,34 @@
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
 
+    shellInit = ''
+      export KUBECONFIGS="?"
+    '';
+
+    shellAliases = {
+      # kube
+      ktx = "kubectx";
+      k = "kubectl";
+      h = "helm";
+      ks = "kubeswitches";
+      # docker
+      d = "docker";
+      dc = "docker compose";
+      # tf tg
+      tf = "terraform";
+      tg = "terragrunt";
+      # git alias
+      commit = "git add . && git commit -am";
+      push = "git push origin";
+      pullreb = "git pull origin --rebase";
+      # other
+      v = "vault";
+      gen_tf_doc = "terraform-docs markdown table --output-file README.md --output-mode inject";
+      hd = "helm-docs";
+    };
+
     ohMyZsh = {
       enable = true;
-     # plugins = [ "git" "zsh-autosuggestions" "zsh-syntax-highlighting" ];
       plugins = [ "git" ];
       theme = "robbyrussell"; 
     };
