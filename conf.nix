@@ -111,6 +111,7 @@
 
     shellInit = ''
       export KUBECONFIGS="?"
+      export EDITOR=vim
     '';
 
     shellAliases = {
