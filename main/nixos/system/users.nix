@@ -1,8 +1,10 @@
-{
-  users.users.etm = {
-    isNormalUser = true;
-    description = "etm";
-    extraGroups = [ "networkmanager" "wheel" "storage" "plugdev" "docker"];
-    home = "/home/etm";
+{ pkgs, user, ... }: {
+  programs.zsh.enable = true;
+  users = {
+    defaultUserShell = pkgs.zsh;
+    users.${user} = {
+      isNormalUser = true;
+      extraGroups = [ "networkmanager" "wheel" "storage" "plugdev" "docker"];
+    };
   };
 }

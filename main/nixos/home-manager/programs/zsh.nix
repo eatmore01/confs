@@ -17,6 +17,7 @@ in {
       nixrebuild = "sudo nixos-rebuild switch";
       nixclear = "sudo nix-collect-garbage -d";
       nixrebuildflake = "sudo nixos-rebuild switch --flake ${flakePath}";
+      nixflakeupdate = "nix flake update --flake ${flakePath}";
 
       # kube
       ktx = "kubectx";
